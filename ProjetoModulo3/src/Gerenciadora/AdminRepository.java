@@ -1,13 +1,15 @@
 package ProjetoModulo3.src.Gerenciadora;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import ProjetoModulo3.src.Classes.Produto;
 import ProjetoModulo3.src.Marcacao.Admin;
 
 public class AdminRepository {
-    private static final List<Object> listaDeProdutos = new ArrayList<>();
+    static List<Object> listaDeProdutos = ProdutoRepository.listaDeProdutos;
+
+    // deixar produtorepository só para criar
+    // deixar adminrepository só para operações do admin
 
     public static void printListaDeProdutos(Object produto) {
         boolean existeProdutoCadastrado = false;

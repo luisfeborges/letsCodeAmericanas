@@ -82,11 +82,15 @@ public class MenuAdmin {
 
                     menuAdminInicial = false;
                 } else if(opcaoMenuAdmin == 2){
-
+                    ProdutoRepository.ListaProdutos();
+                    menuAdminInicial = false;
 
                 } else if(opcaoMenuAdmin == 3){
 
                 } else if(opcaoMenuAdmin == 4){
+                    System.out.println("Digite o ID do produto que você deseja remover:");
+                    int idRemover = scanner.nextInt();
+                    
 
                 } else if(opcaoMenuAdmin == 5){
                     System.out.println("Menu Admin fechado!");

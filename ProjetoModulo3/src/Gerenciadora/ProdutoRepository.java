@@ -10,8 +10,8 @@ import ProjetoModulo3.src.Classes.Informatica;
 import ProjetoModulo3.src.Classes.Livro;
 import ProjetoModulo3.src.Classes.Mercado;
 
-public class ProdutoRepository {
-    private static final List<Object> listaDeProdutos = new ArrayList<>();
+public interface ProdutoRepository {
+    static final List<Object> listaDeProdutos = new ArrayList<>();
 
     public static void CadastroInformatica(String nome, Double preco, String marca, int voltagem) {
         int tamanho = listaDeProdutos.size();
@@ -63,18 +63,5 @@ public class ProdutoRepository {
             .build();  
             
             listaDeProdutos.add(novoLivro);
-    }
-
-    public static void ListaProdutos(){
-        boolean possuiLista = false;
-        for (Object produto: listaDeProdutos) {
-            System.out.println(produto);
-            System.out.println(" ");
-            possuiLista = true;
-        }
-
-        if(possuiLista == false){
-            System.out.println("Não há produtos cadastrados");
-        }
     }
 }
