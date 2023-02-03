@@ -4,16 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ProjetoModulo3.src.Classes.Produto;
-import ProjetoModulo3.src.Classes.Usuario;
 import ProjetoModulo3.src.Marcacao.Admin;
 
 public class AdminRepository {
     private static final List<Object> listaDeProdutos = new ArrayList<>();
-
-    public static void cadastrarProduto(Object produto) {
-        listaDeProdutos.add(produto);
-        System.out.println("Produto cadastrado!");
-    }
 
     public static void printListaDeProdutos(Object produto) {
         boolean existeProdutoCadastrado = false;
@@ -41,11 +35,11 @@ public class AdminRepository {
                 if (id == ((Produto) idDeBusca).getId()){
                     int linhaParaExcluir = id - 1;
                     listaDeProdutos.remove(linhaParaExcluir);
-                    System.out.println("O animal " + ((Produto) idDeBusca).getNome() + " foi deletado!");
+                    System.out.println("O produto " + ((Produto) idDeBusca).getNome() + " foi deletado!");
                 }
             }
         } else {
-            System.out.println("Animal não encontrado");
+            System.out.println("Produto não encontrado");
         }
     }
 

@@ -24,7 +24,12 @@ public class Mercado extends Produto {
         this.peso = peso;
     }
     
-    public Mercado(int quantidade, String nomeMercado, int peso) {
+    public Mercado(int id, String nome, Double preco, String categoria, String marca, int quantidade, String nomeMercado, int peso) {
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.marca = marca;       
         this.quantidade = quantidade;
         this.nomeMercado = nomeMercado;
         this.peso = peso;

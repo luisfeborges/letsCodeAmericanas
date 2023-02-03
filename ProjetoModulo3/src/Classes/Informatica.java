@@ -11,9 +11,15 @@ public class Informatica extends Produto {
         return voltagem;
     }
 
-    public Informatica(int voltagem) {
+    public Informatica(int id, String nome, Double preco, String categoria, String marca, int voltagem) {
+        this.id = id;
+        this.nome = nome;
+        this.preco = preco;
+        this.categoria = categoria;
+        this.marca = marca;       
         this.voltagem = voltagem;
     }
+
 
     @Override
     public String toString() {
