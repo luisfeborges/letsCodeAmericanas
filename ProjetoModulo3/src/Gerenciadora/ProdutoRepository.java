@@ -11,7 +11,7 @@ import ProjetoModulo3.src.Classes.Livro;
 import ProjetoModulo3.src.Classes.Mercado;
 
 public interface ProdutoRepository {
-    static final List<Object> listaDeProdutos = new ArrayList<>();
+    static final List<Object> listaDeProdutos = new ArrayList<Object>();
 
     public static void CadastroInformatica(String nome, Double preco, String marca, int voltagem) {
         int tamanho = listaDeProdutos.size();

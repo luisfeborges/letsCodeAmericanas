@@ -8,14 +8,11 @@ import ProjetoModulo3.src.Marcacao.Admin;
 public class AdminRepository {
     static List<Object> listaDeProdutos = ProdutoRepository.listaDeProdutos;
 
-    // deixar produtorepository só para criar
-    // deixar adminrepository só para operações do admin
-
-    public static void printListaDeProdutos(Object produto) {
+    public static void printListaDeProdutos() {
         boolean existeProdutoCadastrado = false;
         for (Object produtoCadastrado: listaDeProdutos) {
             System.out.println("Produto " + ((Produto) produtoCadastrado).getId() + ":");
-            System.out.println(produto);
+            System.out.println(produtoCadastrado);
             System.out.println(" ");
             existeProdutoCadastrado = true;
         }

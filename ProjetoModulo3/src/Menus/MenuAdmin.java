@@ -2,6 +2,7 @@ package ProjetoModulo3.src.Menus;
 
 import java.util.Scanner;
 
+import ProjetoModulo3.src.Gerenciadora.AdminRepository;
 import ProjetoModulo3.src.Gerenciadora.ProdutoRepository;
 
 public class MenuAdmin {
@@ -13,7 +14,7 @@ public class MenuAdmin {
         boolean menuAdminAberto = true;
 
         do{
-            System.out.println("Faça seu login!");
+            System.out.println("Escolha a opção desejada");
             System.out.println("1. Cadastrar produto");
             System.out.println("2. Visualizar lista de produtos");
             System.out.println("3. Editar produto");
@@ -82,7 +83,7 @@ public class MenuAdmin {
 
                     menuAdminInicial = false;
                 } else if(opcaoMenuAdmin == 2){
-                    ProdutoRepository.ListaProdutos();
+                    AdminRepository.printListaDeProdutos();
                     menuAdminInicial = false;
 
                 } else if(opcaoMenuAdmin == 3){
@@ -90,7 +91,7 @@ public class MenuAdmin {
                 } else if(opcaoMenuAdmin == 4){
                     System.out.println("Digite o ID do produto que você deseja remover:");
                     int idRemover = scanner.nextInt();
-                    
+                    AdminRepository.removerProduto(idRemover);                   
 
                 } else if(opcaoMenuAdmin == 5){
                     System.out.println("Menu Admin fechado!");
