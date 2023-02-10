@@ -10,18 +10,23 @@ public class CalculadoraDeFreteViaBike implements CalculadoraDeFrete {
     public Double calcular(Produto produto, Double km) throws MuitoLongeException {
 
         if (km  < 0) {
-            throw new RuntimeException("Vou andar pra trás?");
-        }
-
-        if (km > 100) {
-            throw new RuntimeException("Ta ficando maluco?");
+            throw new RuntimeException("Insira um valor de distância válido");
         }
 
         Double valorKm = 0.4;
 
-        if (km > 20.00) {
-            valorKm = 1.0;
-        }
+
+        if(km < 12.00) {
+            if(km < 5.00){
+                valorKm = 0.4;
+            } else if(km < 8.00){
+                valorKm = 0.7;
+            } else{
+                valorKm = 1.0;
+            }
+        } else{
+            throw new RuntimeException("Não é possível usar transporte via bike nessa entrega");
+        }        
 
         return produto.getPeso() * km * valorKm;
     }
