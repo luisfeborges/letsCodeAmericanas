@@ -1,5 +1,7 @@
 package CalculadoraDePrecosModulo3.Calculadoras;
 
+import CalculadoraDePrecosModulo3.Classes.Produto;
+
 public class CalculadoraDeFreteViaBikeRestrita extends CalculadoraDeFreteViaBike {
 
 

@@ -1,5 +1,9 @@
 package CalculadoraDePrecosModulo3.Calculadoras;
 
+import CalculadoraDePrecosModulo3.Classes.Produto;
+import CalculadoraDePrecosModulo3.Interfaces.CalculadoraDeDesconto;
+import CalculadoraDePrecosModulo3.Interfaces.CalculadoraDeFrete;
+
 public class CalculadoraDePreco {
 
     private final CalculadoraDeFrete calculadoraDeFrete;

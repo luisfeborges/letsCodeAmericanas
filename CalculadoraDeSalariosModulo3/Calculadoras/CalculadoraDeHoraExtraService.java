@@ -1,5 +1,8 @@
 package CalculadoraDeSalariosModulo3.Calculadoras;
 
+import CalculadoraDeSalariosModulo3.Classes.Funcionario;
+import CalculadoraDeSalariosModulo3.Interfaces.RealizaHoraExtra;
+
 public class CalculadoraDeHoraExtraService<T extends Funcionario & RealizaHoraExtra> {
 
     public Double calcularHoraExtra(T funcionario) {

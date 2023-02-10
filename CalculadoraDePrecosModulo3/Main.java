@@ -1,5 +1,16 @@
 package CalculadoraDePrecosModulo3;
 
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDeDescontoNatal;
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDeDescontoProgressivo;
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDeFreteCorreios;
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDeFreteTransportadora;
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDeFreteViaBike;
+import CalculadoraDePrecosModulo3.Calculadoras.CalculadoraDePreco;
+import CalculadoraDePrecosModulo3.Calculadoras.MuitoLongeException;
+import CalculadoraDePrecosModulo3.Classes.Produto;
+import CalculadoraDePrecosModulo3.Interfaces.CalculadoraDeDesconto;
+import CalculadoraDePrecosModulo3.Interfaces.CalculadoraDeFrete;
+
 public class Main {
     
     public static void main(String[] args) throws MuitoLongeException {

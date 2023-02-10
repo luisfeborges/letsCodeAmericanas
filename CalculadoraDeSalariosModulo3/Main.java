@@ -1,5 +1,12 @@
 package CalculadoraDeSalariosModulo3;
 
+import CalculadoraDeSalariosModulo3.Calculadoras.CalculadoraDeSalario;
+import CalculadoraDeSalariosModulo3.Calculadoras.CalculadoraDeSalarioPF;
+import CalculadoraDeSalariosModulo3.Calculadoras.CalculadoraDeSalarioPJ;
+import CalculadoraDeSalariosModulo3.Classes.Funcionario;
+import CalculadoraDeSalariosModulo3.Classes.FuncionarioCLT;
+import CalculadoraDeSalariosModulo3.Classes.FuncionarioPJ;
+
 public class Main {
     
     public static void main(String[] args) {

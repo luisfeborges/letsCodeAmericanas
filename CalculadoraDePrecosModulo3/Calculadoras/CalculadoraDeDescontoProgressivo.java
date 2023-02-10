@@ -1,5 +1,8 @@
 package CalculadoraDePrecosModulo3.Calculadoras;
 
+import CalculadoraDePrecosModulo3.Classes.Produto;
+import CalculadoraDePrecosModulo3.Interfaces.CalculadoraDeDesconto;
+
 public class CalculadoraDeDescontoProgressivo implements CalculadoraDeDesconto {
 
     public Double calcular(Produto produto) {

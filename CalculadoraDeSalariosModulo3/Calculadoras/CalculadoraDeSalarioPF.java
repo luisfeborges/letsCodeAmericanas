@@ -1,5 +1,7 @@
 package CalculadoraDeSalariosModulo3.Calculadoras;
 
+import CalculadoraDeSalariosModulo3.Classes.FuncionarioCLT;
+
 public class CalculadoraDeSalarioPF implements CalculadoraDeSalario<FuncionarioCLT> {
     private final CalculadoraDeImpostoPF calculadoraDeImposto = new CalculadoraDeImpostoPF();
     private final CalculadoraDeHoraExtraService<FuncionarioCLT> calculadoraDeHoraExtraService = new CalculadoraDeHoraExtraService();
