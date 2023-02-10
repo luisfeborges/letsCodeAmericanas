@@ -1,24 +1,55 @@
 package CalculadoraDeSalariosModulo3.Classes;
 
-public abstract class Funcionario {
+import CalculadoraDeSalariosModulo3.Validadores.ValidaBonus;
+import CalculadoraDeSalariosModulo3.Validadores.ValidaDesconto;
+import CalculadoraDeSalariosModulo3.Validadores.ValidaSalarioBruto;
+
+public class Funcionario{
     
-    private Double valorHora;
-    private Integer horasNormais;
+    private Double salarioBruto;
+    private Double descontos;
+    private Double bonus;
 
-    public Double getValorHora() {
-        return valorHora;
+    public Double getSalarioBruto() {
+        return salarioBruto;
     }
 
-    public void setValorHora(Double valorHora) {
-        this.valorHora = valorHora;
+    public void setSalarioBruto(Double salarioBruto) {
+        boolean validacaoSalarioBruto = ValidaSalarioBruto.validadorSalarioBruto(salarioBruto);
+
+        if(validacaoSalarioBruto == false) {
+            throw new RuntimeException("O salário bruto não pode ser inferior ao salário mínimo");
+        }
+
+        this.salarioBruto = salarioBruto;
     }
 
-    public Integer getHorasNormais() {
-        return horasNormais;
+    public Double getDescontos() {
+        return descontos;
     }
 
-    public void setHorasNormais(Integer horasNormais) {
-        this.horasNormais = horasNormais;
+    public void setDescontos(Double descontos) {
+        boolean validacaoDesconto = ValidaDesconto.validadorDesconto(descontos, getSalarioBruto());
+
+        if(validacaoDesconto == false) {
+            throw new RuntimeException("O desconto não pode ser maior que o salário");
+        }
+
+        this.descontos = descontos;
+    }
+
+    public Double getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(Double bonus) {
+        boolean validacaoBonus = ValidaBonus.validadorBonus(bonus);
+        
+        if(validacaoBonus == false) {
+            throw new RuntimeException("O bonus não pode ser maior que 1000.00");
+        }
+        
+        this.bonus = bonus;
     }
 
 }
