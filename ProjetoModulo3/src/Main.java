@@ -6,6 +6,7 @@ import ProjetoModulo3.src.Classes.Informatica;
 import ProjetoModulo3.src.Classes.Livro;
 import ProjetoModulo3.src.Classes.Mercado;
 import ProjetoModulo3.src.Classes.Usuario;
+import ProjetoModulo3.src.Financeiro.CompraProduto;
 import ProjetoModulo3.src.Gerenciadora.AdminRepository;
 import ProjetoModulo3.src.Gerenciadora.UserRepository;
 import ProjetoModulo3.src.Gerenciadora.UsuarioRepository;
@@ -76,8 +77,13 @@ public class Main {
             // Ordenar por preço
         UserRepository.ordenarPorPreco();
 
-        // Ordenar por nome
+            // Ordenar por nome
         UserRepository.ordenacaoPorNome();
+
+            // Pagando produtos
+        CompraProduto.comprarProduto(usuarioUser, Livro1, "pix");
+        CompraProduto.comprarProduto(usuarioUser, Informatica1, "boleto");
+        CompraProduto.comprarProduto(usuarioUser, Livro1, "cartão");
 
     }
 }
