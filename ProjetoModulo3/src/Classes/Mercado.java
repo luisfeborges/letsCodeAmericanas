@@ -1,43 +1,39 @@
 package ProjetoModulo3.src.Classes;
 
+import java.util.UUID;
+
 public class Mercado extends Produto {
-    private int quantidade;
     private String nomeMercado;
     private int peso;
     
-    public int getQuantidade() {
-        return quantidade;
-    }
+    
     public String getNomeMercado() {
         return nomeMercado;
     }
-    public int getPeso() {
-        return peso;
-    }
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
+
     public void setNomeMercado(String nomeMercado) {
         this.nomeMercado = nomeMercado;
     }
+
+    public int getPeso() {
+        return peso;
+    }
+
     public void setPeso(int peso) {
         this.peso = peso;
     }
-    
-    public Mercado(int id, String nome, Double preco, String categoria, String marca, int quantidade, String nomeMercado, int peso) {
-        this.id = id;
-        this.nome = nome;
-        this.preco = preco;
-        this.categoria = categoria;
-        this.marca = marca;       
-        this.quantidade = quantidade;
+
+    public Mercado(String nome, Double preco, String categoria, String marca, String nomeMercado, int peso) {
+        super(UUID.randomUUID(), nome, preco, categoria, marca); 
         this.nomeMercado = nomeMercado;
         this.peso = peso;
     }
     
     @Override
-    public String toString() {
-        return "Mercado [quantidade=" + quantidade + ", nomeMercado=" + nomeMercado + ", peso=" + peso + "]";
+    public void dadosProduto() {
+        super.dadosProduto();
+        System.out.println("Nome do Mercado: " + nomeMercado);
+        System.out.println("Peso: " + peso);
     }
     
 }

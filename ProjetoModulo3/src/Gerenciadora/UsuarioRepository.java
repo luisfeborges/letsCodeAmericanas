@@ -1,26 +1,16 @@
 package ProjetoModulo3.src.Gerenciadora;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import ProjetoModulo3.src.Classes.BaseDeDados;
 import ProjetoModulo3.src.Classes.Usuario;
-import ProjetoModulo3.src.Builders.UsuarioBuilder;;
 
-public class UsuarioRepository implements Comparable<Usuario> {
-    private static final List<Usuario> listaDeUsuarios = new ArrayList<>();
+public class UsuarioRepository {
 
-    public static void cadastroUsuario(String login, String senha, int tipoDeAcesso) {
-        int tamanho = listaDeUsuarios.size();;
-        int id = tamanho + 1;
+    static List<Usuario> listaDeUsuarios = BaseDeDados.usuariosCadastrados;
 
-        Usuario novoUser = new UsuarioBuilder()
-            .id(id)
-            .login(login)
-            .senha(senha)
-            .tipoDeAcesso(tipoDeAcesso)
-            .build();  
-            
-            listaDeUsuarios.add(novoUser);
+    public <T extends Usuario> void cadastroUsuario(T usuario) {
+        listaDeUsuarios.add(usuario);
     }
 
     public static boolean verificaCadastro(String login, String senha) {
@@ -68,13 +58,4 @@ public class UsuarioRepository implements Comparable<Usuario> {
 
         return tipoDeAcesso;
     }
-
-    @Override
-    public int compareTo(Usuario o) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-
-
 }

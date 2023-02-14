@@ -31,18 +31,9 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Usuario(int id, String login, String senha, int tipoDeAcesso) {
-        this.id = id;
+    public Usuario(String login, String senha, int tipoDeAcesso) {
         this.login = login;
         this.senha = senha;
         this.tipoDeAcesso = tipoDeAcesso;
     }
-    
-    
-    @Override
-    public String toString() {
-        return "Usuario [id=" + id + ", login=" + login + ", senha=" + senha + ", tipoDeAcesso=" + tipoDeAcesso + "]";
-    }
-
-
 }

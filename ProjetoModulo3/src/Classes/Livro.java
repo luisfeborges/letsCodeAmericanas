@@ -1,5 +1,7 @@
 package ProjetoModulo3.src.Classes;
 
+import java.util.UUID;
+
 public class Livro extends Produto{
     private int qtdPaginas;
     private String genero;
@@ -24,20 +26,19 @@ public class Livro extends Produto{
         this.autor = autor;
     }
     
-
-    public Livro(int id, String nome, Double preco, String categoria, String marca, int qtdPaginas, String genero, String autor) {
-        this.id = id;
-        this.nome = nome;
-        this.preco = preco;
-        this.categoria = categoria;
-        this.marca = marca;        
+    public Livro(String nome, Double preco, String categoria, String marca, int qtdPaginas, String genero, String autor) {
+        super(UUID.randomUUID(), nome, preco, categoria, marca); 
         this.qtdPaginas = qtdPaginas;
         this.genero = genero;
         this.autor = autor;
     }
 
+
     @Override
-    public String toString() {
-        return "Livro [qtdPaginas=" + qtdPaginas + ", genero=" + genero + ", autor=" + autor + "]";
+    public void dadosProduto() {
+        super.dadosProduto();
+        System.out.println("Quantidade de páginas: " + qtdPaginas);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Autor: " + autor);
     }
 }

@@ -1,28 +1,29 @@
 package ProjetoModulo3.src.Classes;
 
+import java.util.UUID;
+
 public class Informatica extends Produto {
     private int voltagem;
-
-    public void setVoltagem(int voltagem) {
-        this.voltagem = voltagem;
-    }
 
     public int getVoltagem() {
         return voltagem;
     }
 
-    public Informatica(int id, String nome, Double preco, String categoria, String marca, int voltagem) {
-        this.id = id;
-        this.nome = nome;
-        this.preco = preco;
-        this.categoria = categoria;
-        this.marca = marca;       
+
+    public void setVoltagem(int voltagem) {
+        this.voltagem = voltagem;
+    }
+
+
+    public Informatica(String nome, Double preco, String categoria, String marca, int voltagem) {
+        super(UUID.randomUUID(), nome, preco, categoria, marca); 
         this.voltagem = voltagem;
     }
 
 
     @Override
-    public String toString() {
-        return "Informatica [voltagem=" + voltagem + "]";
+    public void dadosProduto() {
+        super.dadosProduto();
+        System.out.println("Voltagem: " + voltagem);
     }
 }
