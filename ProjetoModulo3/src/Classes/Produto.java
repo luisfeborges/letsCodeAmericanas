@@ -123,6 +123,8 @@ public abstract class Produto {
         System.out.println("Preco: " + this.getPreco());
         System.out.println("Categoria: " + this.getCategoria());
         System.out.println("Marca: " + this.getMarca());
+        System.out.println("---------------------------");
+
     }
 
     

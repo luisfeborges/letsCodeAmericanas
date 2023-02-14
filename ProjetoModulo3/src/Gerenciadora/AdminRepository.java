@@ -8,15 +8,16 @@ import ProjetoModulo3.src.Classes.Produto;
 public class AdminRepository {
     static List<Produto> listaDeProdutos = BaseDeDados.produtosCadastrados;
 
-    public <T extends Produto> void cadastrarProduto(T produto) {
+    public static <T extends Produto> void cadastrarProduto(T produto) {
         listaDeProdutos.add(produto);
+        System.out.println("O " + produto.getNome() + " foi cadastrado!");
     }
 
-    public void verProdutos() {
+    public static void verProdutos() {
         BaseDeDados.printListaDeProdutos();
     }
 
-    public void editarProduto(Produto produto) {
+    public static void editarProduto(Produto produto) {
         for (Produto produtoNaLista : listaDeProdutos) {
             if (produtoNaLista.getNome().equals(produto.getNome())) {
                 int index = listaDeProdutos.indexOf(produtoNaLista);
@@ -24,9 +25,12 @@ public class AdminRepository {
                 break;
             }
         }
+
+        System.out.println("O " + produto.getNome() + " foi editado!");
     }
 
-    public void removerProduto(Produto produto) {
+    public static void removerProduto(Produto produto) {
         listaDeProdutos.remove(produto);
+        System.out.println("O " + produto.getNome() + " foi removido!");
     }
 }

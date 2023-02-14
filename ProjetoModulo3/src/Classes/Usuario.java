@@ -4,12 +4,12 @@ public class Usuario {
     protected int id;
     protected String login;
     protected String senha;
-    protected int tipoDeAcesso;
+    protected String tipoDeAcesso;
 
-    public int getTipoDeAcesso() {
+    public String getTipoDeAcesso() {
         return tipoDeAcesso;
     }
-    public void setTipoDeAcesso(int tipoDeAcesso) {
+    public void setTipoDeAcesso(String tipoDeAcesso) {
         this.tipoDeAcesso = tipoDeAcesso;
     }
     public int getId() {
@@ -31,7 +31,7 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public Usuario(String login, String senha, int tipoDeAcesso) {
+    public Usuario(String login, String senha, String tipoDeAcesso) {
         this.login = login;
         this.senha = senha;
         this.tipoDeAcesso = tipoDeAcesso;

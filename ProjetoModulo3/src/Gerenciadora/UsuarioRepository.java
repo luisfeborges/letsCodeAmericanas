@@ -9,7 +9,7 @@ public class UsuarioRepository {
 
     static List<Usuario> listaDeUsuarios = BaseDeDados.usuariosCadastrados;
 
-    public <T extends Usuario> void cadastroUsuario(T usuario) {
+    public static <T extends Usuario> void cadastroUsuario(T usuario) {
         listaDeUsuarios.add(usuario);
     }
 
@@ -45,17 +45,5 @@ public class UsuarioRepository {
         }
 
         return retorno;        
-    }
-
-    public static int retornoTipoDeAcesso(String login){
-        int tipoDeAcesso = 0;
-
-        for (Usuario objetoUsuario: listaDeUsuarios) {
-            if(objetoUsuario.getLogin() == login){
-                tipoDeAcesso = objetoUsuario.getTipoDeAcesso();
-            }
-        }
-
-        return tipoDeAcesso;
     }
 }

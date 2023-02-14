@@ -12,6 +12,9 @@ public class UserRepository{
         if(listaDeProdutos.size() == 0){
             System.out.println("Não há produtos cadastrados");
         } else{
+            System.out.println("Os produtos cadastrados são:");
+            System.out.println("");
+
             for (Produto produto : listaDeProdutos) {
                 System.out.println("Nome: " + produto.getNome());
                 System.out.println("Preço: " + produto.getPreco());
@@ -22,7 +25,10 @@ public class UserRepository{
         }
     }
 
-    public void filtroPorCategoria(String categoria) {
+    public static void filtroPorCategoria(String categoria) {
+        System.out.println("Filtrando os produtos pela categoria " + categoria);
+        System.out.println("");
+
         for (Produto produto : listaDeProdutos) {
             if (produto.getCategoria().equals(categoria)) {
                 System.out.println("Nome: " + produto.getNome());
@@ -34,7 +40,10 @@ public class UserRepository{
         }
     }
 
-    public void filtroPorMarca(String marca) {
+    public static void filtroPorMarca(String marca) {
+        System.out.println("Filtrando os produtos pela marca " + marca);
+        System.out.println("");
+
         for (Produto produto : listaDeProdutos) {
             if (produto.getMarca().equals(marca)) {
                 System.out.println("Nome: " + produto.getNome());
@@ -46,8 +55,10 @@ public class UserRepository{
         }
     }
 
-    public void ordenacaoPorNome() {
+    public static void ordenacaoPorNome() {
         listaDeProdutos.sort((p1, p2) -> p1.getNome().compareTo(p2.getNome()));
+        System.out.println("Ordenando por nome:");
+        System.out.println("");
 
         for (Produto produto : listaDeProdutos) {
             System.out.println("Id: " + produto.getId());
@@ -59,8 +70,10 @@ public class UserRepository{
         }
     }
 
-    public void ordenarPorPreco() {
+    public static void ordenarPorPreco() {
         listaDeProdutos.sort((p1, p2) -> Double.compare(p1.getPreco(), p2.getPreco()));
+        System.out.println("Ordenando por preço:");
+        System.out.println("");
 
         for (Produto produto : listaDeProdutos) {
             System.out.println("Nome: " + produto.getNome());
